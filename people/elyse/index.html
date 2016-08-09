@@ -1,0 +1,35 @@
+index.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+    </head>
+    <body>
+        <div class="invoca">
+            <a class="invocaLink" href="http://invoca.com"> 
+                <img src="images/invoca.png"/> 
+            </a>
+          
+            <div>
+                <h2 id="name">My finger hurts</h2>
+                <span id="content">
+                Press cmd + shift + j to open developer tools
+                </span>
+            </div>
+            <br>
+        </div>
+
+        <script type="text/javascript">
+          var name  = prompt("Enter your name");
+          var title = prompt("Enter your title");
+
+          if (name == "Garvan") {
+          	console.log("Hello Garvan")
+          } else {
+          	console.log("you are not garvan!");
+          }
+          
+          console.log(name + " is a " + title + " at Invoca");
+        </script>
+    </body>
+</html>
