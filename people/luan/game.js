@@ -6,6 +6,7 @@ function randBetween(min, max) {
 function ask(answer) {
 	
 	var guess = prompt('Please enter a number between 1 and 10');
+	document.getElementById("gameResults").innerHTML = guess;
 		while (guess < 1 || guess > 10) {
 			var guess = prompt('Uh oh, your number is not between 1 and 10. Please enter a new number!');
 		} 

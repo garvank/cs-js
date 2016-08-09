@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+    </head>
+    <body>
+        <div class="invoca">
+            <a class="invocaLink" href="http://invoca.com"> 
+                <img src="images/invoca.png"/> 
+            </a>
+          
+            <div>
+                <h2 id="name">Luan's Demo Page</h2>
+                <span id="content">
+                <h1></h1>
+                <button type="button" onclick="newGame()" class="btn green">Let's play a game!</button>
+                <div id="gameResults"></div>
+                </span>
+            </div>
+            <br>
+        </div>
+
+        <script src="game.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            var today = new Date();
+            var time = today.getHours();
+
+            var name  = prompt("Enter your name");
+
+            function capitalizeFirstLetter(string) {
+                return string.charAt(0).toUpperCase() + string.slice(1);
+            };
+
+            function checkTime() {
+                if (time > 0 && time <= 12) {
+                    $("h1").append("Good Morning, " + capitalizeFirstLetter(name));
+                    $("body").css("background-image", "url('morning.jpg')");
+                    $(".invoca img").css("margin", "200px 0 0 0")
+                } else if (time > 12 && time < 18) {
+                    $("h1").append("Good Afternoon, " + capitalizeFirstLetter(name))
+                    $("body").css("background-image", "url('afternoon.jpg')");
+                } else {
+                    $("h1").append("Good Evening, " + capitalizeFirstLetter(name));
+                    $("body").css("background-image", "url('night1.jpg')");
+                    $("h1").css("color", "#ffffff")
+                }
+            };
+
+            checkTime();
+            
+           if (name == "Garvan" || name == "garvan") {
+                alert("Hey Garvan, hope you like the changes!")
+           };
+
+        </script>
+    </body>
+</html>
