@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+    </head>
+    <body>
+        <h1 style="text-align: center"> 
+        Blueberries are fun!</h1> <br>
+<img src="images/blueberries.jpg"/> 
+          
+         <p> Do you like Blueberries?</p>
+
+        <select id = "Yes_or_No" onchange="myFunction()">
+            <option value="none">
+            <option value="Yes">Yes
+            <option value="No">No  
+        </select>
+            
+<p> How many do you want? </p>
+
+  <select id = "How_much" onchange="myFunction()">
+        <option value="none">
+        <option value="a_zillion">a_zillion
+        <option value="none">none  
+        </select>
+
+        <p Your Blueberry Level> </p>
+
+        <p id="demo"></p>
+
+        <script>
+
+        
+function myFunction(){
+    var answer1 = document.getElementById("Yes_or_No").value;
+    var answer2 = document.getElementById("How_much").value;
+
+if(answer1 == "Yes" && answer2 == "a_zillion") {
+    document.getElementById("demo").innerHTML = "You're a Bluberry Star!";
+
+} else if (answer1 == "No" && answer2 == "none") {
+    document.getElementById("demo").innerHTML = "You're not a blueberry lover...";
+
+} else if (answer1 == "Yes" && answer2 == "none") {
+    document.getElementById("demo").innerHTML = "You're being silly!";
+
+} else if (answer1 == "No" && answer2 == "a_zillion") {
+    document.getElementById("demo").innerHTML = "So confusing!";
+
+} else {
+    document.getElementById("demo").innerHTML = "Please select both fields";
+}
+}
+
+
+</script>
+
+<center>
+
