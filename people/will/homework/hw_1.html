@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing Page for Scripts</title>
+</head>
+<body>
+
+<!-- Testing page to try out if and else statements-->
+
+
+<h1 style="text-align: center"> The Ultimate Source for Finding <span style = "color: #f00"> Power Level</span></h1>
+
+
+<form style = "text-align: center; margin-top: 50px;" name = "power1" action = "#">What is your power level? 
+	<input type="text" id = "powerInput" name="text1"><input type="button" name="button1" value="Check power" onclick="powerCheck()">
+</form>
+
+<p style = "margin-top: 200px; text-align: center;">This took <em>far</em> longer than I wish it had.</p>
+
+<script type="text/javascript">
+	
+	var powerLevel = document.getElementById('powerInput');
+
+	function powerCheck() {
+	  var powerLevel = document.getElementById('powerInput');
+	  if (powerLevel.value > 9000) {
+	    console.log("You input " + powerLevel.value + " as your power level");
+		alert("Your Power Level is OVER 9000!");
+
+	  } else {
+	    console.log ("You input " + powerLevel.value + " as your power level");
+	    alert ("...KEEP TRAINING...");
+	  }
+	}
+</script>
+
+</body>
+</html>
+
+
