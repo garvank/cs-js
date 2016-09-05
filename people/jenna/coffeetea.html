@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tea v Coffee </title>
+</head>
+<body>
+
+<!-- Testing page to try out if and else statements-->
+
+
+<h1 style="text-align: center"> Tea & Coffee </h1>
+<br> <center><img src="https://uploads.disquscdn.com/images/7b7eb86cc5695faa31ee4c015f42cba1f3d9a9e719c2f020dd14b64234783741.jpg"></center>
+
+
+
+<center>
+<h2 style="text-align: center"> Which type of drink is right for you? </style> </h1>
+
+<p>How do you feel?</p>
+
+<select id="feeling" onchange="myFunction()">
+  <option value="none">
+  <option value="Pumped">Pumped
+  <option value="Drowsy">Drowsy
+ 
+</select>
+
+
+<br><br>
+<p>Strength?</p>
+
+<select id="type" onchange="myFunction()">
+  <option value="none">
+  <option value="Refreshing">Refreshing
+  <option value="Strong">Strong
+</select>
+
+<p>Here is your drink....</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("feeling").value;
+    var y = document.getElementById("type").value;
+   	
+   	if (x == "Pumped" && y == "Refreshing") {
+   	 document.getElementById("demo").innerHTML = "Moroccan Mint Tea!";
+	} else if (x == "Pumped" && y == "Strong") {
+   	 document.getElementById("demo").innerHTML = "Arabica Colombia Dark Roast Coffee!";
+	} else if (x == "Drowsy" && y == "Refreshing") {
+   	 document.getElementById("demo").innerHTML = "Hawaiian Kona Coffee";
+	} else if (x == "Drowsy" && y == "Strong") {
+   	 document.getElementById("demo").innerHTML = "English Early Grey Tea.";
+	} else {
+		document.getElementById("demo").innerHTML = "Please select both fields";
+	}} 
+</script>
+
+</center>
+
+<center>
+	<script type="text/javascript">
+	
+	function budgetCheck() {
+	if (document.location1.text1.value > 4) {
+		window.open("http://www.vicesandspices.net/");
+	} else {
+		console.log ('Sugest 15 W')
+		window.open("https://www.google.com/maps/place/15+W+Figueroa+St,+Santa+Barbara,+CA+93101/@34.4217694,-119.7056993,17z/data=!3m1!4b1!4m5!3m4!1s0x80e9147c37d1506b:0x8635de7c33ede8c7!8m2!3d34.4217694!4d-119.7035106/")
+	}}
+</script>
+<br><br><br>
+<h2 style="text-align: center"> Where to purchase your suggested drink? </style> </h2>
+
+
+<form style = "text-align: center; margin-top: 50px;"" name = "location1" action = "#">What is your budget? $
+	<input type="text" name="text1"><input type="button" name="button1" value="Find location" onclick="budgetCheck()">
+</form>
+
+
+
+
+<p style = "margin-top: 200px; text-align: center;">Thanks <span style = "color: #f00"> Will</span> for the base code.</p>
+</center>
+</body>
+</html>
